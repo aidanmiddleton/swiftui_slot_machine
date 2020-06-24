@@ -39,12 +39,18 @@ struct ContentView: View {
                     Image(systemName: "star.fill")
                         .foregroundColor(.yellow)
                 }
+                .padding(.top, 20)
                 .scaleEffect(2)
+                
+                
+                Spacer()
                 
                 Text("Credits: " + String(self.credits))
                     .padding(.all, 10)
                     .background(Color.white.opacity(0.5))
                     .cornerRadius(20)
+                
+                Spacer()
                 
                 HStack {
                     
@@ -72,6 +78,8 @@ struct ContentView: View {
                     
                 }
                 
+                Spacer()
+                
                 Button(action: {
                     
                     self.credits += 1
@@ -80,11 +88,13 @@ struct ContentView: View {
                     Text("SPIN")
                         .bold()
                         .foregroundColor(.white)
-                        .background(Color.pink)
                         .padding(.all, 10)
+                        .padding([.leading, .trailing], 30)
+                        .background(Color.pink)
                         .cornerRadius(15)
                 }
                 
+                Spacer()
             }
             
         }
