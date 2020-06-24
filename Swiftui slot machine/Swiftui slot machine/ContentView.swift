@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var credits = 1001
+    
     var body: some View {
         
         ZStack {
@@ -32,33 +34,55 @@ struct ContentView: View {
                     Text("Big Boi Slots")
                         .bold()
                         .foregroundColor(.white)
+                        
                     
                     Image(systemName: "star.fill")
                         .foregroundColor(.yellow)
                 }
-            .scaleEffect(2)
+                .scaleEffect(2)
                 
-                Text("Credits: 1000")
-                    .padding(.all, 20)
+                Text("Credits: " + String(self.credits))
+                    .padding(.all, 10)
                     .background(Color.white.opacity(0.5))
                     .cornerRadius(20)
                 
                 HStack {
                     
-                    Image("cherry")
-                        .resizable()
-                        .aspectRatio(1, contentMode: .fit)
-                        .background(Color.white.opacity(0.5))
+                    Spacer()
                     
                     Image("cherry")
                         .resizable()
                         .aspectRatio(1, contentMode: .fit)
                         .background(Color.white.opacity(0.5))
+                    .cornerRadius(20)
                     
                     Image("cherry")
                         .resizable()
                         .aspectRatio(1, contentMode: .fit)
                         .background(Color.white.opacity(0.5))
+                    .cornerRadius(20)
+                    
+                    Image("cherry")
+                        .resizable()
+                        .aspectRatio(1, contentMode: .fit)
+                        .background(Color.white.opacity(0.5))
+                        .cornerRadius(20)
+                    
+                    Spacer()
+                    
+                }
+                
+                Button(action: {
+                    
+                    self.credits += 1
+                    
+                }) {
+                    Text("SPIN")
+                        .bold()
+                        .foregroundColor(.white)
+                        .background(Color.pink)
+                        .padding(.all, 10)
+                        .cornerRadius(15)
                 }
                 
             }
