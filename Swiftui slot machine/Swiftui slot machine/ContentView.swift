@@ -12,7 +12,16 @@ struct ContentView: View {
     
     var body: some View {
         
-        VStack {
+        ZStack {
+            Rectangle()
+                .foregroundColor(Color(red: 86/255, green: 127/255, blue: 184/255))
+                .edgesIgnoringSafeArea(.all)
+            
+            Rectangle()
+                .foregroundColor(Color(red: 133/255, green: 201/255, blue: 237/255))
+                .rotationEffect(Angle(degrees:45))
+                .edgesIgnoringSafeArea(.all)
+            
             
         }
         
