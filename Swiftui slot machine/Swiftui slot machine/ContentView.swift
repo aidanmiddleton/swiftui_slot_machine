@@ -93,6 +93,10 @@ struct ContentView: View {
                     
                     self.numbers[2] = Int.random(in: 0...self.symbols.count - 1)
                     
+                    if self.numbers[0] == self.numbers[1] && self.numbers[1] == self.numbers[2] {
+                        self.credits += 50
+                    }
+                    
                     
                     
                 }) {
