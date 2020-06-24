@@ -22,6 +22,46 @@ struct ContentView: View {
                 .rotationEffect(Angle(degrees:45))
                 .edgesIgnoringSafeArea(.all)
             
+            VStack {
+                
+                HStack {
+                    
+                    Image(systemName: "star.fill")
+                        .foregroundColor(.yellow)
+                    
+                    Text("Big Boi Slots")
+                        .bold()
+                        .foregroundColor(.white)
+                    
+                    Image(systemName: "star.fill")
+                        .foregroundColor(.yellow)
+                }
+            .scaleEffect(2)
+                
+                Text("Credits: 1000")
+                    .padding(.all, 20)
+                    .background(Color.white.opacity(0.5))
+                    .cornerRadius(20)
+                
+                HStack {
+                    
+                    Image("cherry")
+                        .resizable()
+                        .aspectRatio(1, contentMode: .fit)
+                        .background(Color.white.opacity(0.5))
+                    
+                    Image("cherry")
+                        .resizable()
+                        .aspectRatio(1, contentMode: .fit)
+                        .background(Color.white.opacity(0.5))
+                    
+                    Image("cherry")
+                        .resizable()
+                        .aspectRatio(1, contentMode: .fit)
+                        .background(Color.white.opacity(0.5))
+                }
+                
+            }
             
         }
         
